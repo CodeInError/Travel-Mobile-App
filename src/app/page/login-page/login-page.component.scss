@@ -1,0 +1,222 @@
+body {
+  background: #f2f2f2;
+}
+.animate {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(75, 72, 72);
+  background-image: url("/assets/Places/login1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Ensure the background stays behind other elements */
+}
+
+.valid-input {
+  color: green;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+a {
+  color: #633F8F;
+}
+a:hover,
+a:focus {
+  color: #633F8F;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.text-primary {
+  color: #633F8F;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+.logo h1 {
+  color: #633F8F;
+  margin-bottom: -12px;
+}
+input[type="checkbox"] {
+  width: auto;
+}
+button {
+  cursor: pointer;
+  background: #633F8F;
+  width: 100%;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 20px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+span.validate-tooltip {
+  background: #D91717;
+  width: 100%;
+  display: block;
+  padding: 5px;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-top: -28px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation: tooltipanimation 0.3s 1;
+  animation: tooltipanimation 0.3s 1;
+}
+
+.logo-image {
+  width: 112px; /* Adjust the width as per your desired size */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.social-icons i {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+ion-loading.custom-loading {
+  --background: #e3edff;
+  --spinner-color: #1c6dff;
+
+  color: #1c6dff;
+}
+
+.icon-left {
+  margin-right: 8px;
+}
+
+.icon-right {
+  margin-left: 8px;
+}
+
+.custom-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  animation: spin 1.5s infinite linear;
+  color: #9365B8;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+::ng-deep .custom-loading {
+  --background: transparent;
+  --overlay-background-color: transparent;
+  --color-primary: #fff; /* Customize the color as needed */
+  --color-secondary: #fff; /* Customize the color as needed */
+}
+
+.error-message {
+  position: relative;
+  text-align: left;
+
+  .red-star {
+    color: red;
+    margin-left: 4px;
+  }
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 3px;
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: 800;
+}
+
+.create-account{
+  font-size: 18px;font-weight: bold;
+}
+
+
+
+@-webkit-keyframes tooltipanimation {
+  from {
+    margin-top: -28px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes tooltipanimation {
+  from {
+    margin-top: -28px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+.direction {
+  width: 200px;
+  position: fixed;
+  top: 120px;
+  left: 20px;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  background: #9365B8;
+  padding: 10px;
+  color: #fff;
+}
+@media (max-width: 480px) {
+  .direction {
+    position: static;
+  }
+  .title-row{
+    padding: 5px 5px !important;
+    font-size: 15px !important;
+  }
+  .create-account{
+    font-size: 15px;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  }
+
+  .valid-input {
+    color: green;
+  }
+
+
+
+
+
+
+}

@@ -1,0 +1,58 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.dashboard-image{
+  background-image: url("/assets/Places/login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.toolbox{
+  border: 1px solid #8B8B8B;
+  box-shadow: 0px 0px 3px #959595;
+  text-align: center;
+  font-size: 40px;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-image: url('/assets/Places/finalDash3.png');
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  padding-top: 330px;
+  gap: 100px;
+}
+
+.iconSet {
+  font-size: 24px;
+}
+

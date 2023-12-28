@@ -1,0 +1,69 @@
+<!-- registration-page.component.html -->
+<!-- <div class="background-image"></div>
+<div class="logo text-center">
+  <img src="assets/icon/output-onlinepngtools.png" alt="Logo" class="logo-image">
+</div> -->
+<div class="background-image"></div>
+<div class="wrapper">
+  <div class="logo text-center">
+    <img src="assets/icon/output-onlinepngtools.png" alt="Logo" class="logo-image">
+  </div>
+  <div class="inner-wrapper text-center">
+    <div class="title-row" style="justify-content: space-between;display: flex;">
+      <span>User Registration</span>
+      <a (click)="navigateToLogin()" class="login">User Login</a>
+    </div>
+    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+      <div class="input-group">
+        <label class="placeholder" for="fullName"></label>
+        <input class="form-control" formControlName="fullName" id="fullName" type="text" placeholder="Full Name" />
+        <span class="tertiary"></span>
+        <div class="error-message" *ngIf="registrationForm.get('fullName').invalid && registrationForm.get('fullName').touched">
+         Full Name is required.
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="placeholder" for="email"></label>
+        <input class="form-control" formControlName="email" id="email" type="email" placeholder="Email" />
+        <span class="tertiary"></span>
+        <div class="error-message" *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched">
+          Email is required and must be a valid email address.
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="placeholder" for="phnNumber"></label>
+        <input class="form-control" formControlName="phnNumber" id="phnNumber" type="number" placeholder="Mobile Number" />
+        <span class="tertiary"></span>
+        <div class="error-message" *ngIf="registrationForm.get('phnNumber').invalid && registrationForm.get('phnNumber').touched">
+          Mobile Number is required and must be a valid Mobile Number.
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="placeholder" for="password"></label>
+        <input class="form-control" formControlName="password" id="password" type="password" placeholder="Password" />
+        <span class="tertiary"></span>
+        <div class="error-message" *ngIf="registrationForm.get('password').invalid && registrationForm.get('password').touched">
+          Password is required and must contain at least 8 characters including uppercase, lowercase, and a number.
+        </div>
+      </div>
+
+      <button type="submit" id="registerButton">
+        <ion-icon name="chevron-forward-circle-outline" class="icon-left"></ion-icon>
+             Register
+         <ion-icon name="chevron-forward" class="icon-right"></ion-icon>
+      </button>
+    </form>
+  </div>
+  <ion-loading id="open-loading" class="custom-loading" message="Loading..." [duration]="3000" spinner="circles"></ion-loading>
+</div>
+<div class="black-transparent-section">
+  <!-- Content within the black transparent section -->
+  <div class="p-20">
+    <div class="d-flex content-center social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </div>
+</div>
+

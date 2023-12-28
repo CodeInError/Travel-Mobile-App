@@ -1,0 +1,57 @@
+
+<div class="background-image"></div>
+
+<div class="wrapper">
+  <div class="logo text-center">
+    <img src="assets/icon/output-onlinepngtools.png" alt="Logo" class="logo-image">
+  </div>
+  <div class="inner-wrapper text-center">
+    <div class="title-row" style="justify-content: space-between;display: flex;">
+      <span>User Login</span>
+      <a (click)="navigateToRegistration()" class="create-account">Create an Account</a>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="input-group">
+        <label class="placeholder" for="userName"></label>
+        <input class="form-control, tertiary" formControlName="userName" id="userName" type="text" placeholder="User Name" />
+        <span class="lighting"></span>
+        <div class="error-message" *ngIf="loginForm.get('userName').invalid && loginForm.get('userName').touched">
+          Username is required.
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="placeholder" for="userPassword"></label>
+        <input class="form-control" formControlName="userPassword" id="userPassword" type="password" placeholder="Password" />
+        <span class="lighting"></span>
+        <div class="error-message" *ngIf="loginForm.get('userPassword').invalid && loginForm.get('userPassword').touched">
+          Password is required.
+        </div>
+      </div>
+
+      <button type="submit" id="loginButton">
+        <ion-icon name="chevron-forward-circle-outline" class="icon-left"></ion-icon>
+             Login to Account
+         <ion-icon name="chevron-forward" class="icon-right"></ion-icon></button>
+      <div class="clearfix supporter">
+        <div class="f-left remember-me">
+          <input id="rememberMe" type="checkbox" formControlName="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <a class="forgot f-right" href="#">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+  <ion-loading id="open-loading" class="custom-loading" message="Loading..." [duration]="3000" spinner="circles"></ion-loading>
+</div>
+  <div class="black-transparent-section">
+    <!-- Content within the black transparent section -->
+    <div class="p-20">
+      <div class="d-flex content-center social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </div>
+
+

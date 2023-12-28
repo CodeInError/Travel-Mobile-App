@@ -1,0 +1,53 @@
+
+<ion-menu contentId="main-content" *ngIf="isLoggedIn">
+  <ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+      <ion-item color="primary">
+        <ion-avatar slot="start">
+          <img alt="Silhouette of a person's head" [src]="profilePhoto ? profilePhoto : 'https://ionicframework.com/docs/img/demos/avatar.svg'" (click)="openFileInput()" />
+          <input type="file" accept="image/*" id="fileInput" #fileInput style="display: none" (change)="onFileSelected($event)">
+        </ion-avatar>
+        <ion-label>Hi, {{fullName}}</ion-label>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeMenu()">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="full" color="primary" (click)="goToLoginPage()">Logout</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
+<div class="ion-page" id="main-content" *ngIf="isLoggedIn">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-avatar slot="start">
+        <img src="assets/icon/output-onlinepngtools.png" alt="Logo"> Sara-Sansar
+      </ion-avatar>
+      <div class="d-flex item-align-center" style="gap: 0;">
+        <ion-title>Sara-Sansar</ion-title>
+        <ion-icon class="iconSet" name="notifications-circle-sharp" (click)="presentToast('top')"></ion-icon>
+        <ion-icon class="iconSet" name="log-out-outline" (click)="goToLoginPage()"></ion-icon>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div id="container">
+      <ion-button size="medium" color="primary" shape="square" class="button-spacing" (click)="goToSearchPlacePage()">
+        <span style="color: white; margin-right:10px;">Uncover Global Travel Spots</span>
+        <ion-icon name="airplane-sharp"></ion-icon>
+      </ion-button>
+      <div>
+        <img src="/assets/Places/mapImg.png" alt="Map" style="width:34%">
+      </div>
+    </div>
+  </ion-content>
+</div>

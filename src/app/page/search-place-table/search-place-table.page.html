@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back" defaultHref="dashboard">
+      </ion-back-button>
+      <ion-searchbar #searchBar placeholder="Search Your Destination" (keyup)="onSearch(searchBar.value)">
+      </ion-searchbar>
+      <ion-icon class="iconSet" name="notifications-circle-sharp" (click)="presentToast('top')"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-title class="p-20">
+    {{ searchResult ? 'Place To Visit In ' + searchResult : ' ' }}
+  </ion-title>
+  <swiper-container [autoplay]="bannerSlidesOpts.autoplay" [options]="bannerSlidesOpts" pagination="true">
+    <ng-container *ngFor="let card of cardData">
+      <swiper-slide>
+        <div class="d-flex flex-wrap content-space row-flex">
+          <ion-card [color]="card.color">
+            <img alt="Silhouette of mountains" [src]="card.imageSrc" />
+            <ion-card-header>
+              <ion-card-title>{{ card.title }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>{{ card.content }}</ion-card-content>
+          </ion-card>
+          <!-- <ion-card [color]="card.color">
+            <img alt="Silhouette of mountains" [src]="card.imageSrc" />
+            <ion-card-header>
+              <ion-card-title>{{ card.title }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>{{ card.content }}</ion-card-content>
+          </ion-card> -->
+          <!-- Add more ion-cards here if needed -->
+        </div>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+</ion-content>

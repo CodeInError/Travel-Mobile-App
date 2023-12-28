@@ -1,0 +1,273 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/* Primary Color */
+:root {
+  --ion-color-primary: 	#8836B1;
+  --ion-color-primary-rgb: 238,238,221;
+}
+
+/* Secondary Color */
+:root {
+  --ion-color-secondary: #BAA7D7;
+  --ion-color-secondary-rgb: 173, 216, 230;
+}
+
+/* Tertiary Color */
+:root {
+  --ion-color-tertiary: #ffc409;
+  --ion-color-tertiary-rgb: 255, 196, 9;
+}
+
+/* Success Color */
+:root {
+  --ion-color-success: #10dc60;
+  --ion-color-success-rgb: 16, 220, 96;
+}
+
+/* Warning Color */
+:root {
+  --ion-color-warning: #ffce00;
+  --ion-color-warning-rgb: 255, 206, 0;
+}
+
+/* Danger Color */
+:root {
+  --ion-color-danger: #ff3d71;
+  --ion-color-danger-rgb: 255, 61, 113;
+}
+
+/* Light Color */
+:root {
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+}
+
+/* Medium Color */
+:root {
+  --ion-color-medium: #989aa2;
+  --ion-color-medium-rgb: 152, 154, 162;
+}
+
+/* Dark Color */
+:root {
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+}
+
+// ion-loading.custom-loading {
+//   --background: #e3edff;
+//   --spinner-color: #1c6dff;
+
+//   color: #1c6dff;
+// }
+
+/* Add this CSS to your global styles.scss file */
+ion-loading {
+  --background: transparent;
+  --overlay-background-color: transparent;
+  --color-primary: #f00707; /* Customize the color as needed */
+  --color-secondary: #0e0d0d; /* Customize the color as needed */
+}
+
+.p-20{
+  padding: 20px;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.row-flex{
+  flex-direction: row;
+}
+
+.content-space{
+  justify-content: space-between;
+}
+
+.content-center{
+  justify-content: center;
+}
+
+.item-align-center{
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.f-left{
+  float: left;
+}
+
+.f-right{
+  float: right;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.input-group label {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  font-size: 16px;
+  color: #cdcdcd;
+  font-weight: normal;
+  padding: 2px 5px;
+  z-index: 5;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.input-group input {
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 3;
+  border: 1px solid #d9d9d9;
+  padding: 10px 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  font-weight: 400;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  color: #000000;
+}
+.input-group .lighting {
+  background: #633F8F;
+  width: 0;
+  height: 2px;
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.input-group.focused .lighting {
+  width: 100%;
+}
+.input-group.focused label {
+  background: #fff;
+  font-size: 12px;
+  top: -8px;
+  left: 5px;
+  color: #633F8F;
+}
+.input-group span.validate-tooltip {
+  margin-top: 0;
+}
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust the opacity value (0.7) to your desired transparency level */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+.wrapper .inner-warpper {
+  padding: 50px 30px 60px;
+  box-shadow: 1px 1.732px 10px 0px rgba(0, 0, 0, 0.063);
+}
+.wrapper .title {
+  margin-top: 0;
+}
+.wrapper .supporter {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #9365B8;
+  cursor: pointer;
+}
+.wrapper .remember-me {
+  cursor: pointer;
+}
+.wrapper input[type="checkbox"] {
+  float: left;
+  margin-right: 5px;
+  margin-top: 2px;
+  cursor: pointer;
+  color: #9365B8;
+}
+.wrapper label[for="rememberMe"] {
+  cursor: pointer;
+}
+.wrapper .signup-wrapper {
+  padding: 10px;
+  font-size: 14px;
+  background: #9365B8;
+}
+.wrapper .signup-wrapper a {
+  text-decoration: none;
+  color: #9365B8;
+}
+.wrapper .signup-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.black-transparent-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity value (0.5) to your desired transparency level */
+  padding: 20px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.iconSet {
+  padding: 15px;
+}
+
+
+
